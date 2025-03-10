@@ -1,0 +1,23 @@
+{
+  "name": "fhir-kafka-pipeline",
+  "version": "1.0.0",
+  "description": "Kafka-based FHIR processing pipeline using Node.js",
+  "type": "module",
+  "main": "src/producer.js",
+  "scripts": {
+    "start": "npm run producer & npm run transformer & npm run consumer",
+    "producer": "node src/producer.js",
+    "transformer": "node src/transformer.js",
+    "consumer": "node src/consumer.js"
+  },
+  "dependencies": {
+    "kafkajs": "^2.0.0",
+    "node-fetch": "^3.0.0",
+    "fs-extra": "^11.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["FHIR", "Kafka", "Node.js", "Streaming"],
+  "license": "MIT"
+}
